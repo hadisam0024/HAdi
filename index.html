@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XRIVETGPT - UNRESTRICTED TERMINAL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'bauhaus-red': '#FF0000',
+              'bauhaus-blue': '#00F0FF',
+              'bauhaus-yellow': '#FFFF00',
+              'bauhaus-black': '#000000',
+              'bauhaus-white': '#050505',
+              'bauhaus-green': '#39FF14',
+            },
+            fontFamily: {
+              sans: ['Courier New', 'monospace'],
+              mono: ['Courier New', 'monospace'],
+            },
+            boxShadow: {
+              'hard': '0px 0px 10px 0px #39FF14',
+              'hard-sm': '0px 0px 5px 0px #39FF14',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000000;
+        color: #39FF14;
+        overflow: hidden;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #39FF14;
+      }
+      textarea {
+        background: #000 !important;
+        color: #39FF14 !important;
+        border: 2px solid #39FF14 !important;
+        text-shadow: 0 0 5px #39FF14;
+      }
+      button {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .glitch {
+        animation: glitch 1s linear infinite;
+      }
+      @keyframes glitch {
+        2%, 64% { transform: translate(2px,0) skew(0deg); }
+        4%, 60% { transform: translate(-2px,0) skew(0deg); }
+        62% { transform: translate(0,0) skew(5deg); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
